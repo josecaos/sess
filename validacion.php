@@ -4,7 +4,7 @@ include_once 'conexion.php';
 //
 $user = $_POST['user'];
 $pass = $_POST['pass'];
-//  @mysqli_query($con, "SET NAMES 'utf8'");
+
 if ($user == null || $pass == null) {
 
   echo '<span>Por favor completa todos los campos</span>';

@@ -14,9 +14,9 @@ function validar(u,p) {
       resultado.html('validando ...');
 
     },
-    success: function() {
+    success: function(data) {
 
-      resultado.html('Ingresando ...');
+      resultado.html(data);
 
     }
   });

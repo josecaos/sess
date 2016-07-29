@@ -8,9 +8,15 @@ $npass1 = $_POST['passIn'];
 $npass2 = $_POST['repassIn'];
 //
 
-$existe = mysqli_query($con, " SELECT * from usuario where user = '$usuario' ");
+//verifica si existe el usuario
+$existe = mysqli_query($con, "SELECT user FROM usuario WHERE user = '$usuario'");
 
-if ($existe) {
+mysqli_close($con);
+// saca los datos en array
+$nusuario = $existe->fetch_assoc();
+
+
+if (!$nusuario['user'] === $usuario) {
 
   mysqli_query($con, "INSERT INTO usuario (user, pass) VALUES ('$usuario','$npass2')");
 
@@ -21,6 +27,7 @@ if ($existe) {
 } else {
 
   echo '¡El usuario ya existe! utiliza otro';
+
 
 }
 //debug

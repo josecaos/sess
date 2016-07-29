@@ -11,7 +11,7 @@ if (isset($_SESSION['usuario'])) {
   <html lang="es">
   <head>
     <meta charset="utf-8">
-    <title>Ingersa</title>
+    <title>Ingresa</title>
     <link rel="stylesheet" type="text/css" href="css/sess.css">
     <script type="text/javascript" src="js/jquery.1.11.1.min.js"></script>
   </head>
