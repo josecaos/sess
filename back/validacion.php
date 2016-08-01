@@ -17,7 +17,7 @@ if ($user == null || $pass == null) {
 
     $_SESSION["usuario"] = $user;
 
-    echo "Datos correctos, estás siendo redirigido a la sesión";
+    echo "Datos correctos, estás siendo redirigido a la aplicación";
 
     echo '<script>
 
