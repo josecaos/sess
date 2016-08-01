@@ -1,8 +1,9 @@
 /*
 written by @joseCao5
 */
-var val_url = 'validacion.php';
-var new_url = 'ingresar_usuario.php';
+var val_url = 'back/validacion.php';
+var new_url = 'back/ingresar_usuario.php';
+// valida ingreso de sesion
 var resultado = $('.resultado');
 function validar(u,p) {
   $.ajax({
