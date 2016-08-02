@@ -7,7 +7,7 @@ echo 'Has terminado tu sesion.';
 
 setTimeout(function() {
 
-  location.href= "../index.php";
+  location.href= "index.php";
 
 },3000);
 

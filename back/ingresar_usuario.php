@@ -25,11 +25,19 @@ if ($nusuario['user'] === $usuario) {
   // cierra consulta de comparacion
   $existe->close();
 
+  // $hashed = sha1($npass2.$nusuario);
+  // print_r($hashed);
+
+
+
   mysqli_query($con, "INSERT INTO usuario (user, pass) VALUES ('$usuario','$npass2')");
 
   // cierra consulta de insercion a db
   mysqli_close($con);
 
-  echo 'Usuario se ha ingresado a la db ';
+  echo password_hash("$npass2", PASSWORD_DEFAULT)."\n";
 
+  echo 'Usuario se ha ingresado a la db' . "\n";
+
+  echo password_hash("$npass2", PASSWORD_DEFAULT)."\n";
 }
