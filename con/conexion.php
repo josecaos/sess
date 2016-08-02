@@ -1,4 +1,8 @@
 <?php
+// reset del id (auto_increment), la base de datos debe estar vacia o por lo mcrypt_enc_get_block_sizetener un
+// numero menor de rows al que se intenta resetear
+// ALTER TABLE tablename AUTO_INCREMENT = 1
+// //////////////////////////////////////////
 // error_reporting(-1);
 // session_start();
 //

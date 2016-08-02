@@ -19,9 +19,12 @@ if (isset($_SESSION['usuario'])) {
                 <!-- ingresar_usuario.php -->
                 <form method="POST" action="return false" onsubmit="return false">
                         <p><input type="text" id="userIn" value="" name="userIn" placeholder="Usuario" required="true"></p>
-                        <p><input type="password" id="passIn" value="" name="passIn" placeholder="Contrasena" required="true"></p>
+                        <p><input type="email" id="emailIn" value="" name="email" placeholder="correo@mail.com" required="true"></p>
+                        <p><input type="password" id="passIn" value="" name="passIn" placeholder="Contraseña" required="true"></p>
                         <p><input type="password" id="repassIn" value="" name="repassIn" placeholder="Repite la Contrasena" required="true"></p>
-                        <p><button type="submit" onclick="valida_nuevo_usuario(document.getElementById('userIn').value,document.getElementById('passIn').value,document.getElementById('repassIn').value)">Ingresa usuario</button></p>
+                        <p>
+                          <button type="submit" onclick="valida_nuevo_usuario(document.getElementById('userIn').value,document.getElementById('emailIn').value,document.getElementById('passIn').value,document.getElementById('repassIn').value)">Ingresa usuario</button>
+                        </p>
                     </form>
                 <a href="logout.php">Cierra tu sesion</a>
                 <div class="resultado">

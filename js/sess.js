@@ -24,7 +24,7 @@ function validar(u,p) {
 };
 //
 // pasa datos para agregar usuario
-function valida_nuevo_usuario(nu,np,renp) {
+function valida_nuevo_usuario(nu,ne,np,renp) {
   if (renp === np ) {
     // debug
     // alert(nu + np + renp);
@@ -32,7 +32,7 @@ function valida_nuevo_usuario(nu,np,renp) {
     $.ajax({
       url: new_url,
       type: 'POST',
-      data: 'userIn=' + nu + '&passIn=' + np + '&repassIn=' + renp,
+      data: 'userIn=' + nu + '&emailIn=' + ne +'&passIn=' + np + '&repassIn=' + renp,
       beforeSend: function() {
 
           resultado.html('Ingresando nuevo usuario ...')
@@ -53,6 +53,7 @@ function valida_nuevo_usuario(nu,np,renp) {
   } else {
 
     resultado.empty().html("Las contraseñas no coinciden, pf! ");
+    alert(nu,ne,np,renp);
 
   }//if
 
